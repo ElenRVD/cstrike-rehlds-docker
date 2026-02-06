@@ -1,4 +1,4 @@
-FROM cm2network/steamcmd
+FROM cm2network/steamcmd:steam-bullseye
 # Задаем переменные окружения
 ENV SERVER_IP=0.0.0.0
 ENV SERVER_PORT=27015
