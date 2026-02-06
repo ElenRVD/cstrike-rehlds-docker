@@ -9,10 +9,10 @@ ENV SERVER_RCON_PASSWORD=changeme
 ENV SERVER_PASSWORD=""
 # Переключаемся на пользователя steam
 USER steam
-# Устанавливаем рабочую директорию
-WORKDIR /home/steam/server/hlds
 # Скачиваем базовый HLDS через SteamCMD
 RUN ./steamcmd.sh +login anonymous +force_install_dir /home/steam/server/hlds +app_update 90 -beta steam_legacy validate +quit
+# Устанавливаем рабочую директорию
+WORKDIR /home/steam/server/hlds
 # Подключаем Metamod-R
 RUN sed -i 's|gamedll_linux "dlls/cs.so"|gamedll_linux "addons/metamod/metamod_i386.so"|g' cstrike/liblist.gam
 # Копируем конфигурационные файлы с правами steam
