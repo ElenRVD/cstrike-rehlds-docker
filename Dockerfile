@@ -14,9 +14,9 @@ RUN ./steamcmd.sh +login anonymous +force_install_dir /home/steam/server/hlds +a
 # Устанавливаем рабочую директорию
 WORKDIR /home/steam/server/hlds
 # Подключаем Metamod-R
-RUN sed -i 's|gamedll_linux "dlls/cs.so"|gamedll_linux "addons/metamod/metamod_i386.so"|g' cstrike/liblist.gam
+#RUN sed -i 's|gamedll_linux "dlls/cs.so"|gamedll_linux "addons/metamod/metamod_i386.so"|g' cstrike/liblist.gam
 # Копируем конфигурационные файлы с правами steam
-COPY --chown=steam:steam hlds/ /home/steam/server/hlds/
+#COPY --chown=steam:steam hlds/ /home/steam/server/hlds/
 # Экспортируем порты
 EXPOSE ${SERVER_PORT}/tcp ${SERVER_PORT}/udp
 # Команда запуска
