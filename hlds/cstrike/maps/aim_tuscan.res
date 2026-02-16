@@ -1,0 +1,10 @@
+gfx/env/dustup.tga
+gfx/env/dustrt.tga
+gfx/env/dustdn.tga
+gfx/env/dustlf.tga
+gfx/env/dustbk.tga
+gfx/env/dustft.tga
+maps/de_tuscan.txt
+maps/aim_tuscan.res
+models/de_tuscan/tuscan_palmtree1.mdl
+models/de_tuscan/tuscan_grass1a.mdl
